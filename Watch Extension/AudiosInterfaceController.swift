@@ -21,7 +21,15 @@ class AudiosInterfaceController: WKInterfaceController {
         
         // Configure interface objects here.
         let files = FileManager.audioFiles()
-        audiosTable.setNumberOfRows(files.count, withRowType: kRowType)
+        let audioTracks = AudioTrack.audiosFromFilesPaths(files)
+        
+        audiosTable.setNumberOfRows(audioTracks.count, withRowType: kRowType)
+        
+        for index in 0..<audiosTable.numberOfRows {
+            if let rowController = audiosTable.rowControllerAtIndex(index) as? AudioRowController {
+                rowController.audioTrack = audioTracks[index]
+            }
+        }
     }
 
     override func willActivate() {
