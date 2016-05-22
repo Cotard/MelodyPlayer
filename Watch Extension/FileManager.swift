@@ -10,21 +10,25 @@ import Foundation
 
 class FileManager: NSObject {
     
-    static let kAudioPathComponent = "/Audios"
+    static let kAudioPathComponent = "Audios"
     
-    class func audioFiles() -> Array<String> {
-        let mainBundlePath = NSBundle.mainBundle().resourcePath!
-        let audiosPath = mainBundlePath.stringByAppendingString(kAudioPathComponent)
+    class func audioFiles() -> Array<NSURL> {
+        let mainBundleUrl = NSBundle.mainBundle().resourceURL!
+        let audiosUrl = mainBundleUrl.URLByAppendingPathComponent(kAudioPathComponent)
+        
         let fileManager = NSFileManager.defaultManager()
-        var files = [String]()
+        var filesUrls = [NSURL]()
         
         do {
-            files = try fileManager.contentsOfDirectoryAtPath(audiosPath)
+            let files = try fileManager.contentsOfDirectoryAtPath(audiosUrl.path!)
+            for file in files {
+                filesUrls.append(audiosUrl.URLByAppendingPathComponent(file))
+            }
         } catch {
             print("Failed to get files paths from main bundle")
         }
         
-        return files
+        return filesUrls
     }
     
 }

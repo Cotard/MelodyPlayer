@@ -12,13 +12,17 @@
                     <items>
                         <table alignment="left" id="5uT-r1-RqZ">
                             <items>
-                                <tableRow identifier="AudioRow" id="T4B-2z-oYZ">
+                                <tableRow identifier="AudioRow" id="T4B-2z-oYZ" customClass="AudioRowController" customModule="Watch_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" spacing="5" id="bOq-5k-7BF">
                                         <items>
                                             <label alignment="left" text="Label" id="GQK-cx-m2q"/>
                                             <label alignment="left" text="Label" id="Squ-ug-npP"/>
                                         </items>
                                     </group>
+                                    <connections>
+                                        <outlet property="labelAudioArtist" destination="Squ-ug-npP" id="Rhr-ov-NfT"/>
+                                        <outlet property="labelAudioTitle" destination="GQK-cx-m2q" id="SRo-xq-tTH"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

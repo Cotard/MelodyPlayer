@@ -11,31 +11,30 @@ import WatchKit
 class AudioTrack {
     
     let title: String
-    let duration: String
+    let artist: String
+    let url: NSURL
     
-    class func audiosFromFilesPaths(files: [String]) -> [AudioTrack] {
+    
+    class func audiosFromFilesUrls(files: [NSURL]) -> [AudioTrack] {
         var audios = [AudioTrack]()
         
         for file in files {
-            let audioAsset = WKAudioFileAsset(URL: NSURL(fileURLWithPath: file))
+            let audioAsset = WKAudioFileAsset(URL: file)
             
             let title = (audioAsset.title != nil) ? audioAsset.title! : "Unknown Track"
+            let artist = (audioAsset.artist != nil) ? audioAsset.artist! : "Unknown Artist"
             
-            let durationInterval = Int(audioAsset.duration)
-            let seconds = durationInterval % 60
-            let minutes = (durationInterval / 60) % 60
-            let duration = String(format: "%d:%02d", minutes, seconds)
-            
-            let audioTrack = AudioTrack(title: title, duration: duration)
+            let audioTrack = AudioTrack(title: title, artist: artist, url: file)
             audios.append(audioTrack)
         }
         
         return audios
     }
     
-    init(title: String, duration: String) {
+    init(title: String, artist: String, url: NSURL) {
         self.title = title
-        self.duration = duration
+        self.artist = artist
+        self.url = url
     }
     
 }
