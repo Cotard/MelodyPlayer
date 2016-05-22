@@ -13,4 +13,13 @@ class AudioRowController: NSObject {
     @IBOutlet var labelAudioTitle: WKInterfaceLabel!
     @IBOutlet var labelAudioDuration: WKInterfaceLabel!
     
+    var audioTrack: AudioTrack? {
+        didSet {
+            if let audioTrack = audioTrack {
+                labelAudioTitle.setText(audioTrack.title)
+                labelAudioDuration.setText(audioTrack.duration)
+            }
+        }
+    }
+    
 }
