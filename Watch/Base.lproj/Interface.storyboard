@@ -13,11 +13,19 @@
                         <table alignment="left" id="5uT-r1-RqZ">
                             <items>
                                 <tableRow identifier="AudioRow" id="T4B-2z-oYZ">
-                                    <group key="rootItem" width="1" alignment="left" id="bOq-5k-7BF"/>
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" spacing="5" id="bOq-5k-7BF">
+                                        <items>
+                                            <label alignment="left" text="Label" id="GQK-cx-m2q"/>
+                                            <label alignment="left" text="Label" id="Squ-ug-npP"/>
+                                        </items>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="audiosTable" destination="5uT-r1-RqZ" id="oUm-B3-zDl"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="298" y="350"/>
