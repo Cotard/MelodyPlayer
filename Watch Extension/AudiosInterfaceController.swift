@@ -12,6 +12,8 @@ import Foundation
 
 class AudiosInterfaceController: WKInterfaceController {
 
+    @IBOutlet var audiosTable: WKInterfaceTable!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
