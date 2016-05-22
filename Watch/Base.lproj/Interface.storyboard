@@ -5,14 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
-        <!--AudiosInterfaceController-->
+        <!--MelodyPlayer-->
         <scene sceneID="ey9-TQ-vkh">
             <objects>
-                <controller identifier="AudiosInterfaceController" id="fog-Ff-mQR">
+                <controller identifier="AudiosInterfaceController" title="MelodyPlayer" id="fog-Ff-mQR" customClass="AudiosInterfaceController" customModule="Watch_Extension">
                     <items>
                         <table alignment="left" id="5uT-r1-RqZ">
                             <items>
-                                <tableRow id="T4B-2z-oYZ">
+                                <tableRow identifier="AudioRow" id="T4B-2z-oYZ">
                                     <group key="rootItem" width="1" alignment="left" id="bOq-5k-7BF"/>
                                 </tableRow>
                             </items>
