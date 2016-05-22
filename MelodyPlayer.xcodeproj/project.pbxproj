@@ -15,7 +15,6 @@
 		CEF3C6721CF1EBC200E19C23 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF3C6701CF1EBC200E19C23 /* Interface.storyboard */; };
 		CEF3C6741CF1EBC200E19C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF3C6731CF1EBC200E19C23 /* Assets.xcassets */; };
 		CEF3C67B1CF1EBC200E19C23 /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CEF3C67A1CF1EBC200E19C23 /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		CEF3C6801CF1EBC200E19C23 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3C67F1CF1EBC200E19C23 /* InterfaceController.swift */; };
 		CEF3C6821CF1EBC200E19C23 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3C6811CF1EBC200E19C23 /* ExtensionDelegate.swift */; };
 		CEF3C6841CF1EBC200E19C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF3C6831CF1EBC200E19C23 /* Assets.xcassets */; };
 		CEF3C6881CF1EBC200E19C23 /* Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CEF3C66E1CF1EBC200E19C23 /* Watch.app */; };
@@ -76,7 +75,6 @@
 		CEF3C6731CF1EBC200E19C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF3C6751CF1EBC200E19C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEF3C67A1CF1EBC200E19C23 /* Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEF3C67F1CF1EBC200E19C23 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		CEF3C6811CF1EBC200E19C23 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		CEF3C6831CF1EBC200E19C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF3C6851CF1EBC200E19C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 		CEF3C67E1CF1EBC200E19C23 /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				CEF3C67F1CF1EBC200E19C23 /* InterfaceController.swift */,
 				CEF3C6811CF1EBC200E19C23 /* ExtensionDelegate.swift */,
 				CEF3C6831CF1EBC200E19C23 /* Assets.xcassets */,
 				CEF3C6851CF1EBC200E19C23 /* Info.plist */,
@@ -296,7 +293,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEF3C6821CF1EBC200E19C23 /* ExtensionDelegate.swift in Sources */,
-				CEF3C6801CF1EBC200E19C23 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
