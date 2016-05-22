@@ -20,8 +20,8 @@
                                         </items>
                                     </group>
                                     <connections>
-                                        <outlet property="labelAudioDuration" destination="Squ-ug-npP" id="ltU-mb-XeQ"/>
-                                        <outlet property="labelAudioTitle" destination="GQK-cx-m2q" id="LVS-4S-8yq"/>
+                                        <outlet property="labelAudioArtist" destination="Squ-ug-npP" id="Rhr-ov-NfT"/>
+                                        <outlet property="labelAudioTitle" destination="GQK-cx-m2q" id="SRo-xq-tTH"/>
                                     </connections>
                                 </tableRow>
                             </items>

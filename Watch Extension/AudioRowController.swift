@@ -9,15 +9,15 @@
 import WatchKit
 
 class AudioRowController: NSObject {
-
+    
+    @IBOutlet var labelAudioArtist: WKInterfaceLabel!
     @IBOutlet var labelAudioTitle: WKInterfaceLabel!
-    @IBOutlet var labelAudioDuration: WKInterfaceLabel!
     
     var audioTrack: AudioTrack? {
         didSet {
             if let audioTrack = audioTrack {
+                labelAudioArtist.setText(audioTrack.artist)
                 labelAudioTitle.setText(audioTrack.title)
-                labelAudioDuration.setText(audioTrack.duration)
             }
         }
     }
