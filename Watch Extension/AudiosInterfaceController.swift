@@ -12,12 +12,16 @@ import Foundation
 
 class AudiosInterfaceController: WKInterfaceController {
 
+    let kRowType = "AudioRow"
+    
     @IBOutlet var audiosTable: WKInterfaceTable!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        let files = FileManager.audioFiles()
+        audiosTable.setNumberOfRows(files.count, withRowType: kRowType)
     }
 
     override func willActivate() {

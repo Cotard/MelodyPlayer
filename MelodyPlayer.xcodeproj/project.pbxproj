@@ -152,10 +152,10 @@
 			children = (
 				CEF3C6911CF2166000E19C23 /* AudiosInterfaceController.swift */,
 				CEF3C6811CF1EBC200E19C23 /* ExtensionDelegate.swift */,
+				CEF3C6971CF23E8000E19C23 /* FileManager.swift */,
 				CEF3C6931CF23B7C00E19C23 /* Audios */,
 				CEF3C6831CF1EBC200E19C23 /* Assets.xcassets */,
 				CEF3C6851CF1EBC200E19C23 /* Info.plist */,
-				CEF3C6971CF23E8000E19C23 /* FileManager.swift */,
 			);
 			path = "Watch Extension";
 			sourceTree = "<group>";
