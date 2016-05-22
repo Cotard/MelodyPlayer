@@ -10,9 +10,9 @@ import Foundation
 
 class FileManager: NSObject {
     
-    let kAudioPathComponent = "/Audios"
+    static let kAudioPathComponent = "/Audios"
     
-    func audioFiles() -> Array<String> {
+    class func audioFiles() -> Array<String> {
         let mainBundlePath = NSBundle.mainBundle().resourcePath!
         let audiosPath = mainBundlePath.stringByAppendingString(kAudioPathComponent)
         let fileManager = NSFileManager.defaultManager()
