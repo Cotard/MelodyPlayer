@@ -13,6 +13,26 @@ class AudioTrack {
     let title: String
     let duration: String
     
+    class func audiosFromFilesPaths(files: [String]) -> [AudioTrack] {
+        var audios = [AudioTrack]()
+        
+        for file in files {
+            let audioAsset = WKAudioFileAsset(URL: NSURL(fileURLWithPath: file))
+            
+            let title = (audioAsset.title != nil) ? audioAsset.title! : "Unknown Track"
+            
+            let durationInterval = Int(audioAsset.duration)
+            let seconds = durationInterval % 60
+            let minutes = (durationInterval / 60) % 60
+            let duration = String(format: "%d:%02d", minutes, seconds)
+            
+            let audioTrack = AudioTrack(title: title, duration: duration)
+            audios.append(audioTrack)
+        }
+        
+        return audios
+    }
+    
     init(title: String, duration: String) {
         self.title = title
         self.duration = duration
